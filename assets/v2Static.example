@@ -1,0 +1,25 @@
+return (
+  <Router>
+    <Route path="/" component={App}>
+      <Route path="calendar" component={Calendar} />
+      <Route path="course/:courseId" component={Course}>
+        <Route path="announcements" components={{
+          sidebar: AnnouncementsSidebar,
+          main: Announcements
+        }}>
+          <Route path=":announcementId" component={Announcement} />
+        </Route>
+        <Route path="assignments" components={{
+          sidebar: AssignmentsSidebar,
+          main: Assignments
+        }}>
+          <Route path=":assignmentId" component={Assignment} />
+        </Route>
+        <Route path="grades" component={CourseGrades} />
+      </Route>
+      <Route path="grades" component={Grades} />
+      <Route path="messages" component={Messages} />
+      <Route path="profile" component={Calendar} />
+    </Route>
+  </Router>
+);

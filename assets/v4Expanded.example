@@ -1,0 +1,15 @@
+return (
+  <Router>
+    <App>
+      <Header />
+      <Match pattern="/calendar" component={Calendar} />
+      <Match pattern="/course/:courseId" component={Course} />
+      <Match pattern="/grades" component={Grades} />
+      <Match pattern="/messages" component={Messages} />
+      <Match pattern="/profile" component={Calendar} />
+      <Match pattern="/(login)?" component={Login} />
+      <Miss component={PageNotFound} />
+      <Footer />
+    </App>
+  </Router>
+);

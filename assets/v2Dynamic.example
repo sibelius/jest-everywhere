@@ -1,0 +1,17 @@
+const rootRoute = {
+  childRoutes: [{
+    path: '/',
+    component: require('./components/App'),
+    childRoutes: [
+      require('./routes/Calendar'),
+      require('./routes/Course'),
+      require('./routes/Grades'),
+      require('./routes/Messages'),
+      require('./routes/Profile'),
+    ],
+  }],
+};
+
+return (
+  <Router routes={rootRoute} />
+);
