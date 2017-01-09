@@ -231,20 +231,69 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading color="white" margin="0 auto 40px">Database tests - Mongoose</Heading>
+            <Heading size="10" color="white" margin="0 auto 40px">Database tests - Mongoose</Heading>
             <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    style={{width: '50%'}}
+                    lang="jsx"
+                    source={require("raw!../assets/code/mongoose.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/mongoose.snap.js")}
+                  />
+                </Appear>
+              </Fill>
             </Layout>
           </Slide>
 
           <Slide>
             <Heading color="white" margin="0 auto 40px">Server tests - Koajs</Heading>
             <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/koa-server.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/koa.js")}
+                  />
+                </Appear>
+              </Fill>
             </Layout>
           </Slide>
 
           <Slide>
             <Heading color="white" margin="0 auto 40px">GraphQL tests</Heading>
             <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/graphql.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/graphql.snap.js")}
+                  />
+                </Appear>
+              </Fill>
             </Layout>
           </Slide>
 
