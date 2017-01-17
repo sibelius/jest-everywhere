@@ -298,26 +298,129 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading color="white" margin="0 auto 40px">React tests</Heading>
+            <Heading color="white" margin="0 auto 40px">React tests (UI)</Heading>
             <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    textSize={10}
+                    lang="jsx"
+                    source={require("raw!../assets/code/react/Link.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/react/Link-test.js")}
+                  />
+                </Appear>
+              </Fill>
             </Layout>
           </Slide>
 
           <Slide>
-            <Heading color="white" margin="0 auto 40px">React Native tests</Heading>
+            <Heading color="white" margin="0 auto 40px">React test (UI) result</Heading>
             <Layout>
-            </Layout>
-          </Slide>
-
-          <Slide>
-            <Heading color="white" margin="0 auto 40px">Relay integration tests</Heading>
-            <Layout>
+              <Appear>
+                <CodePane
+                  textSize={10}
+                  lang="jsx"
+                  source={require("raw!../assets/code/react/Link.snap.js")}
+                />
+              </Appear>
             </Layout>
           </Slide>
 
           <Slide>
             <Heading color="white" margin="0 auto 40px">UX tests - Enzyme</Heading>
             <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/enzyme/Incrementor.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/enzyme/Incrementor-test.js")}
+                  />
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">React Native tests</Heading>
+            <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/reactnative/app.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/reactnative/app-test.js")}
+                  />
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">React Native result</Heading>
+            <Layout>
+              <Appear>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/code/reactnative/app.snap.js")}
+                />
+              </Appear>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">Relay tests</Heading>
+            <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    textSize={8}
+                    lang="jsx"
+                    source={require("raw!../assets/code/relay/app.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/relay/app-test.js")}
+                  />
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">Relay tests result</Heading>
+            <Layout>
+              <Appear>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/code/relay/app.snap.js")}
+                />
+              </Appear>
             </Layout>
           </Slide>
 
@@ -338,65 +441,6 @@ export default class Presentation extends React.Component {
               </CodePane>
             </Layout>
           </Slide>
-
-          <CodeSlide
-            transition={["slide"]}
-            lang="jsx"
-            code={require("raw!../assets/v4Expanded.example")}
-            ranges={[
-              { loc: [2, 12], note: 'We could make this a component' },
-              { loc: [4, 5] },
-              { loc: [5, 6] },
-              { loc: [9, 10] },
-              { loc: [10, 11] }
-            ]}
-          />
-          <Slide transition={["slide"]} bgColor={"white"}>
-            <Heading fix caps textSize={46} textColor={"accent"} margin="0 auto 30">Built-in Components</Heading>
-            <Markdown>
-              {`
-- **Match** Renders UI when a pattern matches a location.
-- **Miss** Renders UI when __NO Matches__ in tree **
-- **Link** Navigate preserving current location in history
-- **Redirect** Navigate replacing current location in history
-- **NavigationPrompt** Prevent the user from navigating
-              `}
-            </Markdown>
-          </Slide>
-          <Slide bgColor="accent" transition={["zoom"]}>
-            <Heading fix caps textColor={"white"} margin="0 auto 30">But Why?</Heading>
-            <Appear><Heading textSize={30} textColor="black" margin="0 auto 25px">Composition</Heading></Appear>
-            <Appear><Heading textSize={30} textColor="black" margin="0 auto 25px">Declarative</Heading></Appear>
-            <Appear><Heading textSize={30} textColor="black" margin="0 auto 25px">Leverage React</Heading></Appear>
-          </Slide>
-          <CodeSlide
-            transition={["slide"]}
-            lang="jsx"
-            code={require("raw!../assets/v4Samples.example")}
-            ranges={[
-              { loc: [0, 0], title: 'v4 Samples' },
-              { loc: [2, 4] },
-              { loc: [6, 8] },
-              { loc: [9, 10] },
-              { loc: [14, 25], note: 'Composed Match' },
-              { loc: [17, 18], note: 'Declarative' },
-              { loc: [31, 49], note: 'Nesting Routes - /course/6/announcements/26/reply' },
-              { loc: [40, 46] },
-              { loc: [54, 70], note: 'Route Config' },
-              { loc: [73, 79] },
-            ]}
-          />
-          <Slide transition={["slide"]} bgColor={"white"}>
-            <Heading fix caps textSize={42} textColor={"accent"} margin="0 auto 30">Router Options</Heading>
-            <Markdown>
-              {`
-- **Hash** router location stored using hash history
-- **Browser** router location stored in browser history
-- **Memory** router location stored in memory
-- **Server** router optimized for server rendering
-              `}
-            </Markdown>
-          </Slide>
           <Slide transition={["slide"]} bgColor="accent">
             <Heading textColor="white">Final Thoughts...</Heading>
           </Slide>
@@ -404,13 +448,12 @@ export default class Presentation extends React.Component {
             <Heading textColor="accent">Resources</Heading>
             <Markdown>
               {`
-- Slides (http://kwelch-rrv4.surge.sh)
-- React Router v4 Docs (http://react-router.now.sh)
+- Slides (https://github.com/sibelius/jest-everywhere)
+- Jest Docs (http://facebook.github.io/jest/)
 - Spectacle (https://github.com/FormidableLabs/spectacle)
-- CodeSlide (https://github.com/thejameskyle/spectacle-code-slide)
 
 *Special Thanks to*
-- @sseraphini - slide review
+- @lucasbento - slide review
               `}
             </Markdown>
           </Slide>
