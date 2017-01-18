@@ -19,7 +19,7 @@ import {
   List,
   ListItem,
 } from "spectacle";
-import CodeSlide from 'spectacle-code-slide';
+//import CodeSlide from 'spectacle-code-slide';
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -162,7 +162,7 @@ export default class Presentation extends React.Component {
                 <Text textColor="accent">sum.js</Text>
                 <CodePane
                   lang="jsx"
-                  source={require("raw!../assets/code/sum")}
+                  source={require("raw!../assets/code/sum.js")}
                   style={{
                     borderRightWidth: 1,
                     borderRightStyle: 'solid',
@@ -175,7 +175,7 @@ export default class Presentation extends React.Component {
                 <Appear transition={["zoom"]}>
                   <CodePane
                     lang="jsx"
-                    source={require("raw!../assets/code/__tests__/sum.spec")}
+                    source={require("raw!../assets/code/__tests__/sum.spec.js")}
                   />
                 </Appear>
               </Fill>
@@ -189,7 +189,7 @@ export default class Presentation extends React.Component {
                 <Text textColor="accent">user.js</Text>
                 <CodePane
                   lang="jsx"
-                  source={require("raw!../assets/code/user")}
+                  source={require("raw!../assets/code/user.js")}
                   style={{
                     borderRightWidth: 1,
                     borderRightStyle: 'solid',
@@ -202,7 +202,7 @@ export default class Presentation extends React.Component {
                 <Appear transition={["zoom"]}>
                   <CodePane
                     lang="jsx"
-                    source={require("raw!../assets/code/__tests__/user.spec")}
+                    source={require("raw!../assets/code/__tests__/user.spec.js")}
                   />
                 </Appear>
               </Fill>
