@@ -231,7 +231,50 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading size="10" color="white" margin="0 auto 40px">Database tests - Mongoose</Heading>
+            <Heading color="white" margin="0 auto 40px">
+              Snapshot Example
+            </Heading>
+            <Layout>
+              <Fill>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/enzyme/Incrementor")}
+                  />
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">
+              Tests Comparison
+            </Heading>
+            <Layout>
+              <Fill>
+                <Text textColor="white">Without Snapshot</Text>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/snapshot/without-snapshot.js")}
+                  />
+                </Appear>
+              </Fill>
+              <Fill>
+                <Text textColor="white">With Snapshot</Text>
+                <Appear>
+                  <CodePane
+                    lang="jsx"
+                    source={require("raw!../assets/code/snapshot/with-snapshot.js")}
+                  />
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+
+
+          <Slide>
+            <Heading size="10" textColor="white" margin="0 auto 40px">Database tests - Mongoose</Heading>
             <Layout>
               <Fill>
                 <Appear>
@@ -427,6 +470,47 @@ export default class Presentation extends React.Component {
           <Slide>
             <Heading color="white" margin="0 auto 40px">Mocking</Heading>
             <Layout>
+              <List textColor="white">
+                <ListItem>Mock functions</ListItem>
+                <ListItem>Manual mock</ListItem>
+              </List>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">Mock functions</Heading>
+            <Layout>
+              <Appear>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/code/mock/functions.js")}
+                />
+              </Appear>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">Mock functions - return value</Heading>
+            <Layout>
+              <Appear>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/code/mock/func-return-value.js")}
+                />
+              </Appear>
+            </Layout>
+          </Slide>
+
+          <Slide>
+            <Heading color="white" margin="0 auto 40px">Manual Mock</Heading>
+            <Text textColor="white">Inside __mocks__/ subdirectory</Text>
+            <Layout>
+              <Appear>
+                <CodePane
+                  lang="jsx"
+                  source={require("raw!../assets/code/mock/aws-sdk.js")}
+                />
+              </Appear>
             </Layout>
           </Slide>
 
@@ -440,6 +524,9 @@ export default class Presentation extends React.Component {
                 `}
               </CodePane>
             </Layout>
+            <Layout>
+              <Text textColor="white">https://facebook.github.io/jest/docs/migration-guide.html</Text>
+            </Layout>
           </Slide>
           <Slide transition={["slide"]} bgColor="accent">
             <Heading textColor="white">Final Thoughts...</Heading>
@@ -450,9 +537,11 @@ export default class Presentation extends React.Component {
               {`
 - Slides (https://github.com/sibelius/jest-everywhere)
 - Jest Docs (http://facebook.github.io/jest/)
+- Hot React Testing Practices (https://medium.com/in-the-hudl/hot-react-testing-practices-1eb10bd61135#.ed382u52x)
 - Spectacle (https://github.com/FormidableLabs/spectacle)
 
 *Special Thanks to*
+- @kylewelch - spectacle slide reference code
 - @lucasbento - slide review
               `}
             </Markdown>

@@ -10,7 +10,7 @@ class Incrementor extends React.Component {
       <div>
         <h1>The Great Incrementor!</h1>
 
-        <button onClick={this.increment)>Increment!</button>
+        <button onClick={this.increment}>Increment!</button>
         <span className="number">{this.state.number}</span>
       </div>
     );
